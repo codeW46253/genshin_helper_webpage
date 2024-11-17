@@ -1,0 +1,19 @@
+.center .num_scroll, .center button, .center select {
+    height: 30px;
+    width: 75%;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.center button {
+    background-color: yellowgreen;
+}
+
+.center button:hover {
+    background-color: rgb(106, 143, 34);
+}
+
+.center select {
+    background-color: gray;
+    color: whitesmoke;
+}

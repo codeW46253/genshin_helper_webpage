@@ -1,0 +1,30 @@
+.feedback_form {
+    border: 2px black solid;
+    padding: 5px;
+}
+
+.feedback_form input, .feedback_form textarea {
+    background-color: black;
+    color: whitesmoke;
+    margin: 5px;
+}
+
+.feedback_form input, .feedback_form button{
+    height: 40px;
+    width: 95%;
+}
+
+.feedback_form textarea {
+    width: 95%;
+    height: 300px;
+    resize: none;
+}
+
+.feedback_form button {
+    margin: 5px;
+    background: #fff;
+}
+
+.feedback_form button:hover {
+    background: #eee;
+}

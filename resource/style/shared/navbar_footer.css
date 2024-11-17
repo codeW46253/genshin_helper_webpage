@@ -1,0 +1,23 @@
+/* Footer */
+.foot {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.quick-links ul li a {
+    color: #fff;
+}

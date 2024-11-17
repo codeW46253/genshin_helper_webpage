@@ -1,0 +1,7 @@
+.intercenter {
+    border: 2px darkgrey solid;
+    width: 90%;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 5px;
+}

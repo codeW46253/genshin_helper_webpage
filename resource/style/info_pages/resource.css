@@ -1,0 +1,5 @@
+.center img {
+    width: 50%;
+    border: 2px black solid;
+    align-self: center;
+}

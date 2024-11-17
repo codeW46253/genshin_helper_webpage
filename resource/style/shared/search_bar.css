@@ -1,0 +1,25 @@
+.search_bar {
+    width: 95%;
+    margin: 5px auto;
+    padding: 3px;
+    border: 2px darkgrey solid;
+}
+
+.search_bar .sb_item {
+    height: 30px;
+    margin: auto;
+}
+
+.search_bar .text {
+    width: 84%;
+}
+
+.search_bar .button {
+    width: 14%;
+    height: 30px;
+    background: #fff;
+}
+
+.search_bar .button:hover {
+    background: #eee;
+}

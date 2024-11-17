@@ -1,0 +1,15 @@
+
+/* Region Emblem and Elemental Symbol */
+.emblem {
+    width: 35%;
+    background-color: darkcyan;
+}
+
+.symbol {
+    width: 15%;
+    background-color: darkblue;
+}
+
+.center table td {
+    width: 50%;
+}

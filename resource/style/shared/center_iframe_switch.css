@@ -1,0 +1,19 @@
+.iframe-switch tr td {
+    border: 0;
+    height: auto;
+    width: auto;
+    padding: auto;
+    
+}
+
+.iframe-switch button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: rgb(156, 169, 180);
+    border: none;
+    cursor: pointer;
+}
+
+.iframe-switch button:hover {
+    background-color: rgb(131, 136, 139);
+}
