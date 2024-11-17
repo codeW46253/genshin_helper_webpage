@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Character Details</title>
+        <link rel="icon" type="image/x-icon" href="resource/photo/main/logo.png">
+        
+        <link rel="stylesheet" href="resource/style/shared/base_style.css">
+        <link rel="stylesheet" href="resource/style/tools/tool.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar_footer.css">
+        <link rel="stylesheet" href="resource/style/shared/center_table.css">
+    </head>
+    <body>
+        
+        <!--NAVIGATION BAR-->
+        <div class="head">
+            <div class="navbar">
+                <img src="resource/photo/main/logo.png" alt="Logo" class="logo">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button onclick="window.location.href='01_index.html'" class="pagebtn">Home</button>
+                    </div>
+                    <div class="dropdown about">
+                        <button class="dropbtn">About 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="02b_about_game.html">Game</a>
+                            <a href="02a_about_us.html">Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown tool">
+                        <button class="dropbtn">Tool 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="03a_tool1.html">Time Manager</a>
+                            <a href="03b_tool2.html">Character Details</a>
+                            <a href="03c_tool3.html">Material Calculator</a>
+                            <a href="03d_tool4.html">Ascension Material List</a>
+                        </div>
+                    </div>
+                    <div class="dropdown resource">
+                        <button onclick="window.location.href='10_resource.html'" class="pagebtn">Resources</button>
+                    </div>
+                    <div class="dropdown feedback">
+                        <button onclick="window.location.href='1000_feedback_form.html'" class="pagebtn">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--NAVIGATION BAR END-->
+
+        <!--Character Ascension Material-->
+        <!--EDIT THIS PART ONLY-->
+        <div class="container">
+            <!--NAVIGATION PART: LEFT-->
+            <div class="navbar_left">
+                <nav>
+                    <ul>
+                        <li><a href="#Gems">Ascencion Gems</a>
+                            <ul>
+                                <li><a href="#gem1">Brilliant Diamond</a></li>
+                                <li><a href="#gem2">Agnidus Agate</a></li>
+                                <li><a href="#gem3">Varunada Lazurite</a></li>
+                                <li><a href="#gem4">Nagadus Emerald</a></li>
+                                <li><a href="#gem5">Vajrada Amethyst</a></li>
+                                <li><a href="#gem6">Vayuda Turquoise</a></li>
+                                <li><a href="#gem7">Shiva Jade</a></li>
+                                <li><a href="#gem8">Prithiva Topaz</a></li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li><a href="#Materials">Local Specialties</a>
+                            <ul>
+                                <li>
+                                    <a href="#region1">Mondstad</a>
+                                    <ul>
+                                        <li><a href="#material1">Calla Lily</a></li>
+                                        <li><a href="#material2">Cecilia</a></li>
+                                        <li><a href="#material3">Dandelion Seed</a></li>
+                                        <li><a href="#material4">Philanemo Mushroom</a></li>
+                                        <li><a href="#material5">Small Lamp Grass</a></li>
+                                        <li><a href="#material6">Valberry</a></li>
+                                        <li><a href="#material7">Windwheel Aster</a></li>
+                                        <li><a href="#material8">Wolfhook</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#NormalBoss">Weekly Boss</a>
+                            <ul>
+                                <li><a href="#boss1">Anemo Hypostasis</a></li>
+                                <li><a href="#boss2">Electro Hypostasis</a></li>
+                                <li><a href="#boss3">Cryo Regisvine</a></li>
+                                <li><a href="#boss4">Cryo Hypostasis</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#WeeklyBoss">Weekly Boss</a>
+                            <ul>
+                                <li><a href="#wboss1">Andrius</a></li>
+                                <li><a href="#wboss2">Stormterror [Dvalin]</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#Talent">Talent Material</a>
+                            <ul>
+                                <li><a href="#tmaterial1" >Freedom</a></li>
+                                <li><a href="#tmaterial2" >Resistance</a></li>
+                                <li><a href="#tmaterial3" >Ballad</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!--NAVIGATION PART: CENTER-->
+            <div class="center">
+                <h1>Character Ascension Material</h1>
+                <div id="Gems">
+                    <h2>Ascension Gems</h2>
+                    <p>
+                        Elemental Stones can be gathered by Daily Commissions fighting a <b>Boss
+                        type enemy</b> or a <b>Weekly Boss</b>. Each stones are specific to
+                        character's elemental type. Traveller's gems are acquired specially
+                        through <b>achieving certain Adventure Rank reward</b>.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                Sliver
+                                <br>
+                                [2 Star]
+                            </th>
+                            <th>
+                                Fragment
+                                <br>
+                                [3 Star]
+                            </th>
+                            <th>
+                                Chunk
+                                <br>
+                                [4 Star]
+                            </th>
+                            <th>
+                                Gemstone
+                                <br>
+                                [5 Star]
+                            </th>
+                            <th>Usage</th>
+                        </tr>
+                        <tr id="gem1">
+                            <td><img src="resource/photo/elemental_stone/Item_Brilliant_Diamond_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Brilliant_Diamond_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Brilliant_Diamond_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Brilliant_Diamond_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/characters/Traveler_Icon.webp"><br/>
+                                Traveller
+                                (Brilliant Diamond)
+                            </td>
+                        </tr>
+                        <tr id="gem2">
+                            <td><img src="resource/photo/elemental_stone/Item_Agnidus_Agate_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Agnidus_Agate_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Agnidus_Agate_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Agnidus_Agate_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Pyro.webp"><br/>
+                                Pyro
+                                (Agnidus Agate)
+                            </td>
+                        </tr>
+                        <tr id="gem3">
+                            <td><img src="resource/photo/elemental_stone/Item_Varunada_Lazurite_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Varunada_Lazurite_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Varunada_Lazurite_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Varunada_Lazurite_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Hydro.webp"><br/>
+                                Hydro
+                                (Varunada Lazurite)
+                            </td>
+                        </tr>
+                        <tr id="gem4">
+                            <td><img src="resource/photo/elemental_stone/Item_Nagadus_Emerald_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Nagadus_Emerald_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Nagadus_Emerald_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Nagadus_Emerald_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Dendro.webp"><br/>
+                                Dendro
+                                (Nagadus Emerald)
+                            </td>
+                        </tr>
+                        <tr id="gem5">
+                            <td><img src="resource/photo/elemental_stone/Item_Vajrada_Amethyst_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Vajrada_Amethyst_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Vajrada_Amethyst_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Vajrada_Amethyst_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Electro.webp"><br/>
+                                Electro
+                                (Vajrada Amethyst)
+                            </td>
+                        </tr>
+                        <tr id="gem6">
+                            <td><img src="resource/photo/elemental_stone/Item_Vayuda_Turquoise_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Vayuda_Turquoise_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Vayuda_Turquoise_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Vayuda_Turquoise_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Anemo.webp"><br/>
+                                Anemo
+                                (Vayuda Turquoise)
+                            </td>
+                        </tr>
+                        <tr id="gem7">
+                            <td><img src="resource/photo/elemental_stone/Item_Shivada_Jade_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Shivada_Jade_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Shivada_Jade_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Shivada_Jade_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Cryo.webp"><br/>
+                                Cryo
+                                (Shivada Jade)
+                            </td>
+                        </tr>
+                        <tr id="gem8">
+                            <td><img src="resource/photo/elemental_stone/Item_Prithiva_Topaz_Sliver.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Prithiva_Topaz_Fragment.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Prithiva_Topaz_Chunk.webp"></td>
+                            <td><img src="resource/photo/elemental_stone/Item_Prithiva_Topaz_Gemstone.webp"></td>
+                            <td>
+                                <img src="resource/photo/element_symbol/Element_Geo.webp"><br/>
+                                Geo
+                                (Prithiva Topaz)
+                            </td>
+                    </table>
+                </div>
+                <div id="Materials">
+                    <h2>Local Specialties</h2>
+                    <p>
+                        Local Specialties used for ascending a character's level.<br/>
+                        Each character uses different material special to their<br/>
+                        region of birth.
+                    </p>
+                    <h3>Mondstad</h3>
+                    <table id="region1">
+                        <tr>
+                            <th>Specialty</th>
+                            <th>Character</th>
+                        </tr>
+                        <tr id="material1">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Calla_Lily.webp"><br/>
+                                Calla Lily
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/cryo/Diona_Icon.webp"><br/>
+                                Diona<br/>
+                                <img src="resource/photo/characters/cryo/Kaeya_Icon.webp"><br/>
+                                Kaeya<br/>
+                            </td>
+                        </tr>
+                        <tr id="material2">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Cecilia.webp"><br/>
+                                Cecilia
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/geo/Albedo_Icon.webp"><br/>
+                                Albedo<br/>
+                                <img src="resource/photo/characters/anemo/Venti_Icon.webp"><br/>
+                                Venti<br/>
+                            </td>
+                        </tr>
+                        <tr id="material3">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Dandelion_Seed.webp"><br/>
+                                Dandelion Seed
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/cryo/Eula_Icon.webp"><br/>
+                                Eula<br/>
+                                <img src="resource/photo/characters/anemo/Jean_Icon.webp"><br/>
+                                Jean<br/>
+                            </td>
+                        </tr>
+                        <tr id="material4">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Philanemo_Mushroom.webp"><br/>
+                                Philanemo Mushroom
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/hydro/Barbara_Icon.webp"><br/>
+                                Barbara<br/>
+                                <img src="resource/photo/characters/pyro/Klee_Icon.webp"><br/>
+                                Klee<br/>
+                                <img src="resource/photo/characters/hydro/Mona_Icon.webp"><br/>
+                                Mona<br/>
+                            </td>
+                        </tr>
+                        <tr id="material5">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Small_Lamp_Grass.webp"><br/>
+                                Small Lamp Grass
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/pyro/Amber_Icon.webp"><br/>
+                                Amber<br/>
+                                <img src="resource/photo/characters/pyro/Diluc_Icon.webp"><br/>
+                                Diluc<br/>
+                                <img src="resource/photo/characters/electro/Fischl_Icon.webp"><br/>
+                                Fischl<br/>
+                            </td>
+                        </tr>
+                        <tr id="material6">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Valberry.webp"><br/>
+                                Valberry
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/electro/Lisa_Icon.webp"><br/>
+                                Lisa<br/>
+                                <img src="resource/photo/characters/geo/Noelle_Icon.webp"><br/>
+                                Noelle<br/>
+                                <img src="resource/photo/characters/cryo/Rosaria_Icon.webp"><br/>
+                                Rosaria<br/>
+                            </td>
+                        </tr>
+                        <tr id="material7">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Windwheel_Aster.webp"><br/>
+                                Wind Wheel Aster
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/pyro/Bennett_Icon.webp"><br/>
+                                Bennett<br/>
+                                <img src="resource/photo/characters/anemo/Sucrose_Icon.webp"><br/>
+                                Sucrose<br/>
+                                <img src="resource/photo/characters/Traveler_Icon.webp"><br/>
+                                Traveler<br/>
+                            </td>
+                        </tr>
+                        <tr id="material8">
+                            <td>
+                                <img src="resource/photo/local_specialties/mondstad/Item_Wolfhook.webp"><br/>
+                                Wolfhook
+                            </td>
+                            <td>
+                                <img src="resource/photo/characters/cryo/Mika_Icon.webp"><br/>
+                                Mika<br/>
+                                <img src="resource/photo/characters/Electro/Razor_Icon.webp"><br/>
+                                Razor<br/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="NormalBoss">
+                    <h2>Normal Bosses</h2>
+                    <p>
+                        Bosses available and ready to fight on the open world. After defeating it,
+                        the boss will respawn after few minutes.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Boss</th>
+                            <th>Material</th>
+                        </tr>
+                        <tr id="boss1">
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/bosses/Anemo_Hypostasis_Icon.webp" alt="">
+                                <br>
+                                Anemo Hypostasis
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/drops/Item_Hurricane_Seed.webp" alt="">
+                                <br>
+                                Hurricane Seed
+                            </td>
+                        </tr>
+                        <tr id="boss2">
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/bosses/Electro_Hypostasis_Icon.webp" alt="">
+                                <br>
+                                Electro Hypostasis</td>
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/drops/Item_Lightning_Prism.webp" alt="">
+                                <br>
+                                Lightning Prism</td>
+                        </tr>
+                        <tr id="boss3">
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/bosses/Cryo_Regisvine_Icon.webp" alt="">
+                                <br>
+                                Cryo Regisvine
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/drops/Item_Hoarfrost_Core.webp" alt="">
+                                <br>
+                                Hoarfrost Core
+                            </td>
+                        </tr>
+                        <tr id="boss4">
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/bosses/Cryo_Hypostasis_Icon.webp" alt="">
+                                <br>
+                                Cryo Hypostasis
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/normal/mondstad/drops/Item_Crystalline_Bloom.webp" alt="">
+                                <br>
+                                Crystalline Bloom</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="WeeklyBoss">
+                    <h2>WeeklyBoss</h2>
+                    <p>
+                        Bosses available once weekly inside specific domain. After defeating
+                        it, the boss will respawn every Monday. The cost for defeating them
+                        is 60 resins but players got to use 30 resin for first 3 turn.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Boss</th>
+                            <th>Material  1</th>
+                            <th>Material  2</th>
+                            <th>Material  3</th>
+                        </tr>
+                        <tr id="wboss1">
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/bosses/Andrius_Icon.webp" alt="">
+                                <br>
+                                Andrius
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/drops/Item_Tail_of_Boreas.webp" alt="">
+                                <br>
+                                Tail of Boreas
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/drops/Item_Ring_of_Boreas.webp" alt="">
+                                <br>
+                                Ring of Boreas
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/drops/Item_Spirit_Locket_of_Boreas.webp" alt="">
+                                <br>
+                                Spirit Locket of Boreas
+                            </td>
+                        </tr>
+                        <tr id="wboss2">
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/bosses/Stormterror_Icon.webp" alt="">
+                                <br>
+                                Stormterror [Dvalin]
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/drops/Item_Dvalin_Plume.webp" alt="">
+                                <br>
+                                Dvalin's Plume
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/drops/Item_Dvalin_Claw.webp" alt="">
+                                <br>
+                                Dvalin's Claw
+                            </td>
+                            <td>
+                                <img src="resource/photo/bosses/weekly/mondstad/drops/Item_Dvalin_Sigh.webp" alt="">
+                                <br>
+                                Dvalin's Sigh
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="Talent">
+                    <h2>Talent Material</h2>
+                    <p>
+                        Talent Materials are divided into two category, which are the Talent's
+                        Material and Common Drop Material. Talent's Material can be collected
+                        after clear up a specific domain. The Talent's Material has three type,
+                        Teaching, Guide and Philosophies.
+                        <table>
+                            <tr>
+                                <th>Talent's Material</th>
+                                <th>
+                                    Teaching
+                                    <br>
+                                    [2 Star]
+                                </th>
+                                <th>
+                                    Guide
+                                    <br>
+                                    [3 Star]</th>
+                                <th>
+                                    Philosophies
+                                    <br>
+                                    [4 Star]
+                                </th>
+                            </tr>
+                            <tr id="tmaterial1">
+                                <td>Freedom</td>
+                                <td><img src="resource/photo/talent_material/freedom/Item_Teachings_of_Freedom.webp"></td>
+                                <td><img src="resource/photo/talent_material/freedom/Item_Guide_to_Freedom.webp"></td>
+                                <td><img src="resource/photo/talent_material/freedom/Item_Philosophies_of_Freedom.webp"></td>
+                            </tr>
+                            <tr id="tmaterial2">
+                                <td>Resistance</td>
+                                <td><img src="resource/photo/talent_material/resistance/Item_Teachings_of_Resistance.webp"></td>
+                                <td><img src="resource/photo/talent_material/resistance/Item_Guide_to_Resistance.webp"></td>
+                                <td><img src="resource/photo/talent_material/resistance/Item_Philosophies_of_Resistance.webp"></td>
+                            </tr>
+                            <tr id="tmaterial3">
+                                <td>Ballad</td>
+                                <td><img src="resource/photo/talent_material/ballad/Item_Teachings_of_Ballad.webp"></td>
+                                <td><img src="resource/photo/talent_material/ballad/Item_Guide_to_Ballad.webp"></td>
+                                <td><img src="resource/photo/talent_material/ballad/Item_Philosophies_of_Ballad.webp"></td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!--DONT EDIT BEYOND THIS PART-->
+
+        <!--NAVIGATION BAR: FOOTER-->
+        <div class="foot">
+            <div class="quick-links">
+                <ul>
+                    <li><a href="01_index.html">HOME</a></li>
+                    <li><a href="02a_about_us.html">ABOUT US</a></li>
+                    <li><a href="10_resource.html">RESOURCES</a></li>
+                </ul>
+            </div>        
+        </div>
+        <!--NAVIGATION BAR: FOOTER END-->
+        
+    </body>
+</html>

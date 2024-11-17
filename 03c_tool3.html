@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Material Calculator</title>
+        <link rel="icon" type="image/x-icon" href="resource/photo/main/logo.png">
+        
+        <link rel="stylesheet" href="resource/style/shared/base_style.css">
+        <link rel="stylesheet" href="resource/style/tools/tool.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar_footer.css">
+       <link rel="stylesheet" href="resource/style/shared/center_table.css">
+    </head>
+    <body>
+        
+        <!--NAVIGATION BAR-->
+        <div class="head">
+            <div class="navbar">
+                <img src="resource/photo/main/logo.png" alt="Logo" class="logo">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button onclick="window.location.href='01_index.html'" class="pagebtn">Home</button>
+                    </div>
+                    <div class="dropdown about">
+                        <button class="dropbtn">About 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="02b_about_game.html">Game</a>
+                            <a href="02a_about_us.html">Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown tool">
+                        <button class="dropbtn">Tool 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="03a_tool1.html">Time Manager</a>
+                            <a href="03b_tool2.html">Character Details</a>
+                            <a href="03c_tool3.html">Material Calculator</a>
+                            <a href="03d_tool4.html">Ascension Material List</a>
+                        </div>
+                    </div>
+                    <div class="dropdown resource">
+                        <button onclick="window.location.href='10_resource.html'" class="pagebtn">Resources</button>
+                    </div>
+                    <div class="dropdown feedback">
+                        <button onclick="window.location.href='1000_feedback_form.html'" class="pagebtn">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--NAVIGATION BAR END-->
+
+        <!--Material Calculator-->
+        <!--EDIT THIS PART ONLY-->
+        <div class="container">
+
+            <!--NAVIGATION PART: LEFT-->
+            <div class="navbar_left">
+                <nav>
+                    <ul>
+                        <li><a href="#what">What is Material Drops</a></li>
+                        <li><a href="#tool">Material Calculator</a></li>
+                        <li><a href="#how">How To Use</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--NAVIGATION PART: CENTER-->
+            <div class="center">
+                <h1>Material Calculator</h1>
+                <div id="what">
+                    <h2>What Is Material Drops</h2>
+                    <p>
+                        Material drops are items gathered from every domains and
+                        item collected after defeating a Boss Enemy or Weekly
+                        Bosses.
+
+                        <br><br>
+
+                        The amount of items collectible from domain are static
+                        and changed depends on domain level while drops from normal
+                        Boss type enemies are change depends on World Level.
+
+                        <br><br>
+
+                        <h3>Weapon Ascencion Material</h3>
+                        For every runs from completing a <b>Weapon Ascencion material
+                        domain</b>, players can gather the items with following rates:
+                        <table>
+                            <tr>
+                                <th>Domain Level</th>
+                                <th>
+                                    2 Star Item
+                                    <br>
+                                    [Wooden]
+                                </th>
+                                <th>
+                                    3 Star Item
+                                    <br>
+                                    [Stone]
+                                </th>
+                                <th>
+                                    4 Star Item
+                                    <br>
+                                    [Silver]
+                                </th>
+                                <th>
+                                    5 Star Item
+                                    <br>
+                                    [Golden]
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4 - 6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2 - 3</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2 - 3</td>
+                                <td>0 - 3</td>
+                                <td>0 - 3</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2 - 3</td>
+                                <td>0 - 4</td>
+                                <td>0 - 4</td>
+                                <td>0 - 4</td>
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <h3>Character Talent's Materials</h3>
+                        For every runs from completing a <b>Character Talent's material
+                        domain</b>, players can gather the items with following rates:
+                        <table>
+                            <tr>
+                                <th>Domain Level</th>
+                                <th>
+                                    2 Star Item
+                                    <br>
+                                    [Teaching]
+                                </th>
+                                <th>
+                                    3 Star Item
+                                    <br>
+                                    [Guide]
+                                </th>
+                                <th>
+                                    4 Star Item
+                                    <br>
+                                    [Philosophies]
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>3 - 4</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2 - 3</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2 - 3</td>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2 - 3</td>
+                                <td>0 - 3</td>
+                                <td>0 - 3</td>
+                            </tr>
+                        </table>
+                        
+                        <h3>Ascencion Gems</h3>
+                        For <b>Ascencion Gems</b>, their drop rate is affected by World Level.
+                        Both Normal Bosses and Weekly Bosses have different rate. From
+                        the basic perspective, Normal Bosses will give less gems than
+                        Weekly Bosses since Weekly Bosses have a much higher skills
+                        requirement to fight the bosses. The drop rates for both type
+                        of bosses are as following:
+
+                        <table>
+                            <tr>
+                                <th>World Level</th>
+                                <th>
+                                    Enemy Level
+                                </th>
+                                <th>
+                                    2 Star Item
+                                    <br>
+                                    [Sliver]
+                                </th>
+                                <th>
+                                    3 Star Item
+                                    <br>
+                                    [Fragment]
+                                </th>
+                                <th>
+                                    4 Star Item
+                                    <br>
+                                    [Chunk]
+                                </th>
+                                <th>
+                                    5 Star Item
+                                    <br>
+                                    [Gemstone]
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>
+                                    Normal: 36
+                                    <br>
+                                    Weekly: None
+                                </td>
+                                <td>
+                                    2 - 3
+                                    <br>
+                                    None
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    None
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    None
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    None
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    Normal: 37
+                                    <br>
+                                    Weekly: 37
+                                </td>
+                                <td>
+                                    2 - 3
+                                    <br>
+                                    3 - 4
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    Normal: 41
+                                    <br>
+                                    Weekly: 41
+                                </td>
+                                <td>
+                                    0 - 2
+                                    <br>
+                                    0 - 3
+                                </td>
+                                <td>
+                                    1 - 4
+                                    <br>
+                                    1 - 5
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    Normal: 50
+                                    <br>
+                                    Weekly: 50
+                                </td>
+                                <td>
+                                    0 - 2
+                                    <br>
+                                    0 - 4
+                                </td>
+                                <td>
+                                    1 - 4
+                                    <br>
+                                    1 - 6
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    Normal: 62
+                                    <br>
+                                    Weekly: 62
+                                </td>
+                                <td>
+                                    0 - 2
+                                    <br>
+                                    0 - 4
+                                </td>
+                                <td>
+                                    1 - 4
+                                    <br>
+                                    1 - 5
+                                </td>
+                                <td>
+                                    0 - 2
+                                    <br>
+                                    0 - 4
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    Normal: 72
+                                    <br>
+                                    Weekly: 72
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 5
+                                </td>
+                                <td>
+                                    1 - 5
+                                    <br>
+                                    1 - 7
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 5
+                                </td>
+                                <td>
+                                    0
+                                    <br>
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>
+                                    Normal: 83
+                                    <br>
+                                    Weekly: 83
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 5
+                                </td>
+                                <td>
+                                    1 - 5
+                                    <br>
+                                    1 - 7
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 5
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 5
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>
+                                    Normal: 91
+                                    <br>
+                                    Weekly: 91
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 6
+                                </td>
+                                <td>
+                                    1 - 5
+                                    <br>
+                                    1 - 8
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 6
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 6
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>
+                                    Normal: 93
+                                    <br>
+                                    Weekly: 93
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 6
+                                </td>
+                                <td>
+                                    1 - 5
+                                    <br>
+                                    1 - 8
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 6
+                                </td>
+                                <td>
+                                    0 - 3
+                                    <br>
+                                    0 - 6
+                                </td>
+                            </tr>
+                        </table>
+
+                        2-Star Ascension Gems also can be collected from completing Daily Commissions
+                        where each type of gems has 1/7 chance to be claimed with the amount of
+                        only one per day
+                    </p>
+                </div>
+
+                <div id="tool">
+                    <h2>Material Calculators</h2>
+
+                    <iframe src="tool3.raw.html"></iframe>
+
+                </div>
+
+                <div id="how">
+                    <h2>How To Use</h2>
+                    <p>
+                        Users are required to select <b>Material Type</b> then select
+                        the <b>World Ascencion Level</b> (for material type for Normal
+                        Bosses and Weekly Bosses) and <b>Domain Level</b> (for material
+                        type for Weapon and Character Talent's Ascencion Material)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--DONT EDIT BEYOND THIS PART-->
+
+        <!--NAVIGATION BAR: FOOTER-->
+        <div class="foot">
+            <div class="quick-links">
+                <ul>
+                    <li><a href="01_index.html">HOME</a></li>
+                    <li><a href="02a_about_us.html">ABOUT US</a></li>
+                    <li><a href="10_resource.html">RESOURCES</a></li>
+                </ul>
+            </div>        
+        </div>
+        <!--NAVIGATION BAR: FOOTER END-->
+        
+    </body>
+</html>

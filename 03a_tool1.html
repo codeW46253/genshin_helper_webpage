@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="resource/photo/main/logo.png">
+    <title>Time Manager</title>
+
+    <link rel="stylesheet" href="resource/style/shared/base_style.css">
+    <link rel="stylesheet" href="resource/style/tools/tool.css">
+    <link rel="stylesheet" href="resource/style/shared/navbar.css">
+    <link rel="stylesheet" href="resource/style/shared/navbar_footer.css">
+    <link rel="stylesheet" href="resource/style/shared/center_table.css">
+    <link rel="stylesheet" href="resource/style/shared/center_link.css">
+</head>
+<body>
+
+    <!--NAVIGATION BAR-->
+    <div class="head">
+        <div class="navbar">
+            <img src="resource/photo/main/logo.png" alt="Genshin Impact Guide Logo" class="logo">
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button onclick="window.location.href='01_index.html'" class="pagebtn">Home</button>
+                </div>
+                <div class="dropdown about">
+                    <button class="dropbtn">About 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="02b_about_game.html">Game</a>
+                        <a href="02a_about_us.html">Our Team</a>
+                    </div>
+                </div>
+                <div class="dropdown tool">
+                    <button class="dropbtn">Tool 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="03a_tool1.html">Time Manager</a>
+                        <a href="03b_tool2.html">Character Details</a>
+                        <a href="03c_tool3.html">Material Calculator</a>
+                        <a href="03d_tool4.html">Ascension Material List</a>
+                    </div>
+                </div>
+                <div class="dropdown resource">
+                    <button onclick="window.location.href='10_resource.html'" class="pagebtn">Resources</button>
+                </div>
+                <div class="dropdown feedback">
+                    <button onclick="window.location.href='1000_feedback_form.html'" class="pagebtn">Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--NAVIGATION BAR END-->
+
+    <!--Time Manager-->
+    <!--EDIT THIS PART ONLY-->
+    <div class="container">
+
+        <!--NAVIGATION PART: LEFT-->
+        <div class="navbar_left">
+            <nav>
+                <ul>
+                    <li><a href="#what">What is Time Management?</a></li>
+                    <li><a href="#tool">Time Managing Tool</a></li>
+                    <li><a href="#how">How To Use</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--NAVIGATION PART: CENTER-->
+        <div class="center">
+            <h1>Time Manager</h1>
+            <div id="what">
+                <h2>What Is Time Management?</h2>
+                <p>
+                    Time management in terms of in-game materials gathering refers to strategically planning and optimizing how you spend your time within the game to efficiently collect the resources needed for character progression, crafting, or other in-game activities.
+
+                    <br/><br/>
+
+                    In Genshin Impact, some materials need a special item to collect. This item is called a resin, which regenerates over time. Initially, there are 3 types of resins:
+
+                    <table>
+                        <tr>
+                            <td>
+                                Original Resin
+                            </td>
+                            <td>
+                                This resin regenerates at a rate of 1 resin every 8 minutes. Players can accumulate up to 200 Original Resin at a time, but it takes about 26 hours and 40 minutes for a full replenishment from 0 to 200.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Fragile Resin
+                            </td>
+                            <td>
+                                This resin is collectible from events, the Battle Pass (Gnostic Hymn), and Adventure Rank level up. This resin can restore 60 Original Resin in one use.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Weekly Special Resin (Transient Resin)
+                            </td>
+                            <td>
+                                This resin also provides a bonus of 60 Original Resin in a single use. However, this resin is only accessible for players who unlock a special region inside the Serenitea Pot after completing the "A Teapot to Call Home" quest.
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+
+            <div id="tool">
+                <h2>Time Managing Tool</h2>
+                
+                <iframe src="tool1.raw.html"></iframe>
+                
+            </div>
+
+            <div id="how">
+                <h2>How To Use</h2>
+                <p>
+                    This website requires users to create their weekly planning by selecting the items they need to gather each day. Since each domain changes its collectible materials, players need to plan their time to build up their character's weapons, talents, and levels.
+
+                    <br><br>
+
+                    To use the tool, just select the items you need to collect each day by referring to the <b><a href="03d_tool4.html#Talent">Character Talent's Material</a></b> list.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--DONT EDIT BEYOND THIS PART-->
+
+    <!--NAVIGATION BAR: FOOTER-->
+    <div class="foot">
+        <div class="quick-links">
+            <ul>
+                <li><a href="01_index.html">HOME</a></li>
+                <li><a href="02a_about_us.html">ABOUT US</a></li>
+                    <li><a href="10_resource.html">RESOURCES</a></li>
+                </ul>
+            </div>        
+        </div>
+        <!--NAVIGATION BAR: FOOTER END-->
+        
+    </body>
+</html>

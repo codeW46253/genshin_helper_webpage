@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="resource/photo/main/logo.png">
+        <title>About Game</title>
+        
+        <link rel="stylesheet" href="resource/style/shared/base_style.css">
+        <link rel="stylesheet" href="resource/style/info_pages/about_game.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar_footer.css">
+        <link rel="stylesheet" href="resource/style/shared/center_table.css">
+    </head>
+    <body>
+
+        <!--NAVIGATION BAR-->
+        <div class="head">
+            <div class="navbar">
+                <img src="resource/photo/main/logo.png" alt="Logo" class="logo">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button onclick="window.location.href='01_index.html'" class="pagebtn">Home</button>
+                    </div>
+                    <div class="dropdown about">
+                        <button class="dropbtn">About 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="02b_about_game.html">Game</a>
+                            <a href="02a_about_us.html">Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown tool">
+                        <button class="dropbtn">Tool 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="03a_tool1.html">Time Manager</a>
+                            <a href="03b_tool2.html">Character Details</a>
+                            <a href="03c_tool3.html">Material Calculator</a>
+                            <a href="03d_tool4.html">Ascension Material List</a>
+                        </div>
+                    </div>
+                    <div class="dropdown resource">
+                        <button onclick="window.location.href='10_resource.html'" class="pagebtn">Resources</button>
+                    </div>
+                    <div class="dropdown feedback">
+                        <button onclick="window.location.href='1000_feedback_form.html'" class="pagebtn">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--NAVIGATION BAR END-->
+
+        <!--About Game-->
+        <!--EDIT THIS PART ONLY-->
+        <div class="container">
+
+            <!--NAVIGATION PART: LEFT-->
+            <div class="navbar_left">
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Game Overview</a></li>
+                        <li><a href="#system">Elemental System</a></li>
+                        <li><a href="#ingame">Characters and Combat</a></li>
+                        <li><a href="#progression">Adventure Rank and Progression</a></li>
+                        <li><a href="#multiplayer">Multiplayer and Co-op</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="center">
+                <h1>ABOUT GENSHIN IMPACT</h1>
+                <div id="overview">
+                    <h2>Game Overview</h2>
+                    <p>
+                        Genshin Impact is an open-world action RPG game where players can explore the fantasy world of Teyvat. Players can travel through various regions, each with unique landscapes, characters, and quests. The game uses a gacha system where players can unlock new characters and weapons in limited-time events.
+
+                        <br/><br/>
+
+                        This game is one of many produced by a Chinese company called Hoyoverse, previously known as MiHoyo. The company began working on this game in 2017 and released it on 28 September 2020.
+
+                        <br/><br/>
+
+                        Drawing from various references, Genshin Impact is able to represent several real-life cultures in each region:
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Mondstadt_Emblem_Night.webp" alt="Mondstadt Emblem" class="emblem"><br/>
+                                    Mondstadt: Germany
+                                </td>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Liyue_Emblem_Night.webp" alt="Liyue Emblem" class="emblem"><br/>
+                                    Liyue: China, Taiwan, Hong Kong
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Inazuma_Emblem_Night.webp" alt="Inazuma Emblem" class="emblem"><br/>
+                                    Inazuma: Japan
+                                </td>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Sumeru_Emblem_Night.webp" alt="Sumeru Emblem" class="emblem"><br/>
+                                    Sumeru: India, Middle East
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Fontaine_Emblem_Night.webp" alt="Fontaine Emblem" class="emblem"><br/>
+                                    Fontaine: France, Britain (Victorian Era)
+                                </td>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Liyue_Emblem_Night.webp" alt="Liyue Emblem" class="emblem"><br/>
+                                    Liyue: China, Taiwan, Hong Kong
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/region_emblem/Natlan_Emblem_Night.webp" alt="Natlan Emblem" class="emblem"><br/>
+                                    Natlan: African Countries, South American Country
+                                </td>
+                                <td>
+                                    Snezhnaya: Russia
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+                <div id="system">
+                    <h2>Elemental System</h2>
+                    <p>
+                        Genshin Impact offers a combined system consisting of elemental-power-based
+                        and physical combat gameplay. There are seven types of elemental power:
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Anemo.webp" alt="Anemo Element Symbol" class="symbol anemo">
+                                    Anemo (Wind)
+                                </td>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Geo.webp" alt="Geo Element Symbol" class="symbol geo">
+                                    Geo (Earth)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Electro.webp" alt="Electro Element Symbol" class="symbol electro">
+                                    Electro (Lightning)
+                                </td>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Dendro.webp" alt="Dendro Element Symbol" class="symbol dendro">
+                                    Dendro (Nature)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Hydro.webp" alt="Hydro Element Symbol" class="symbol hydro">
+                                    Hydro (Water)
+                                </td>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Pyro.webp" alt="Pyro Element Symbol" class="symbol pyro">
+                                    Pyro (Fire)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="resource/photo/element_symbol/Element_Cryo.webp" alt="Cryo Element Symbol" class="symbol cryo">
+                                    Cryo (Ice)
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        By combining these elements correctly in combat, players can create powerful reactions such as freezing enemies or causing explosions, adding new strategic depth to battles.
+                    </p>
+                </div>                
+                <div id="ingame">
+                    <h2>Characters and Combat</h2>
+                    <p>
+                        Form a group with up to four characters, each with unique abilities and elemental powers. Switch between characters during combat to create effective elemental combinations. Each character has a normal attack, an elemental skill, and an elemental burst for diverse combat strategies. To achieve a better experience, build up your characters by collecting materials in various types of domains, gathering local specialties, and forming better team combinations.
+                
+                        <br/><br/>
+                
+                        All characters may have different physical combat abilities but can be categorized into five types:
+                        <table>
+                            <tr>
+                                <td>
+                                    Sword
+                                </td>
+                                <td>
+                                    Claymore (Greatsword)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Bow
+                                </td>
+                                <td>
+                                    Polearm (Spear)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Catalyst (Magic)
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        Elemental reactions can also enhance the player's experience by boosting a character's damage output and/or adding additional reaction damage. To further increase damage, players can equip all characters with sets of artifacts to boost their statistics.
+                    </p>
+                </div>
+                <div id="progression">
+                    <h2>Adventure Rank and Progression</h2>
+                    <p>
+                        Your progress is tracked by your Adventure Rank (AR). Players can increase their AR by completing quests, exploring, and defeating enemies. Higher AR levels unlock new content, challenges, and better rewards, encouraging continuous exploration and engagement. In many situations, certain domains are locked to ensure that players are at suitable levels to clear them.
+                
+                        <br/><br/>
+                
+                        In some cases, the main character's (the Traveler) ascension materials are only collectible at certain AR levels since the material is a one-time use and not a collectible.
+                
+                        <br/><br/>
+                
+                        Increasing your AR also increases the World Level at certain AR milestones. At these AR milestones, players need to clear a special domain to level up their World Level. By increasing the World Level, enemy drop rates and levels increase, providing a more challenging and rewarding experience.
+                
+                        <br/><br/>
+                
+                        Progression also includes Main Quests and Side Quests. By completing these, players can receive rewards such as in-game money (Mora), special currency (Primordial Gems/Primogems), or character level-up materials. The Main Quest, also known as the <i>Archon Quest</i>, revolves around each nation's deities called <i>Archons</i>, who possess the authority over their respective elements.
+                
+                        <br/><br/>
+                
+                        The Side Quests are divided into four categories:
+                        <ul>
+                            <li>
+                                <b>Character Story</b>: Stories centered around selected playable characters, allowing players to learn more about their backstories and personal visions.
+                            </li>
+                            <li>
+                                <b>Hangout Event</b>: Stories centered around selected playable characters, where players can hang out with them and discover different endings based on their interactions.
+                            </li>
+                            <li>
+                                <b>Tribal Chronicles</b>: Special story modes focusing on tribal areas in Natlan, where players learn each tribe's history and help with their current problems.
+                            </li>
+                            <li>
+                                <b>World Quest</b>: Stories centered around certain Non-Player Characters (NPCs) to learn more about the region's history and local culture.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="multiplayer">
+                    <h2>Multiplayer and Co-op</h2>
+                    <p>
+                        Genshin Impact supports a multiplayer mode called Co-op, allowing players to team up with friends. Co-op mode can be unlocked at Adventure Rank 16, enabling players to explore the world and tackle challenges together, enhancing the social aspect of the game. However, there are certain limitations in joining others, such as incompatible World Levels. If the host's World Level is too high, players with lower World Levels can't join to prevent any issues on both the developer's and player's sides.
+                
+                        <br/><br/>
+                
+                        When playing in Co-op mode, players can interact with each other to clear domains, collect bosses' materials, and gather many other resources together. By playing in Co-op mode, players can unlock new combat strategies during fights with certain bosses.
+                
+                        <br/><br/>
+                
+                        During some limited events, players can play minigames together and claim generous rewards by encouraging their friends to participate. Since these events are one-time-only, players get to enjoy them as special memories, increasing their enthusiasm to keep playing the game.
+                    </p>
+                </div>                
+            </div>
+        </div>
+        <!--DONT EDIT BEYOND THIS PART-->
+
+        <!--NAVIGATION BAR: FOOTER-->
+        <div class="foot">
+            <div class="quick-links">
+                <ul>
+                    <li><a href="01_index.html">HOME</a></li>
+                    <li><a href="02a_about_us.html">ABOUT US</a></li>
+                    <li><a href="10_resource.html">RESOURCES</a></li>
+                </ul>
+            </div>        
+        </div>
+        <!--NAVIGATION BAR: FOOTER END-->
+        
+    </body>
+</html>

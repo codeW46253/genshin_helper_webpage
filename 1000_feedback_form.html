@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="resource/photo/main/logo.png">
+        <title>Feedback</title>
+
+        <link rel="stylesheet" href="resource/style/shared/base_style.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar_footer.css">
+        <link rel="stylesheet" href="resource/style/tools/feedback_form.css">
+    </head>
+    <body>
+
+        <!--NAVIGATION BAR-->
+        <div class="head">
+            <div class="navbar">
+                <img src="resource/photo/main/logo.png" alt="Logo" class="logo">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button onclick="window.location.href='01_index.html'" class="pagebtn">Home</button>
+                    </div>
+                    <div class="dropdown about">
+                        <button class="dropbtn">About 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="02b_about_game.html">Game</a>
+                            <a href="02a_about_us.html">Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown tool">
+                        <button class="dropbtn">Tool 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="03a_tool1.html">Time Manager</a>
+                            <a href="03b_tool2.html">Character Details</a>
+                            <a href="03c_tool3.html">Material Calculator</a>
+                            <a href="03d_tool4.html">Ascension Material List</a>
+                        </div>
+                    </div>
+                    <div class="dropdown resource">
+                        <button onclick="window.location.href='10_resource.html'" class="pagebtn">Resources</button>
+                    </div>
+                    <div class="dropdown feedback">
+                        <button onclick="window.location.href='1000_feedback_form.html'" class="pagebtn">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--NAVIGATION BAR END-->
+
+        <!--About Us-->
+        <!--EDIT THIS PART ONLY-->
+        <div class="container">
+            <div class="center">
+                <h1>Feedback</h1>
+                <p>
+                    Thank you for using our website to manage your resource
+                    collecting time.
+                    
+                    <br>
+                    
+                    Please leave a comment or suggestion for us to improve
+                    the quality of our website and increase the functionality
+                    of our available tools.
+
+                    <br><br>
+                </p>
+                <div id="feedback" class="feedback_form">
+                    <form action="999_feedback.php" method="get" onsubmit="return validateForm()">
+                        Enter Your Email:
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="Email" required/>
+                        <br><br>
+                        Enter Your Prefered Name:
+                        <br>
+                        <input type="text" id="pname" name="pname" placeholder="Prefered Name" required/>
+                        <br><br>
+                        Enter Your Feedback:
+                        <br>
+                        <textarea id="feedback" name="feedback" required></textarea>
+                        <br>
+                        <button type="submit" value="SUBMIT">SUBMIT</button>
+                    </form>
+
+                    <script>
+                        function validateForm() {
+                            var email    = document.getElementById("email").value;
+                            var feedback = document.getElementById("feedback").value;
+                            var pname    = document.getElementById("pname").value;
+                            if (email === "" || pname === "" || feedback === "") {
+                                alert("Both fields are required.");
+                                return false;
+                            }
+                            return true;
+                        }
+
+                        function displaySuccessMessage() {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            if (urlParams.get('status') === 'success') {
+                                urlParams.delete('status');
+                                const newUrl = window.location.pathname + '?' + urlParams.toString();
+                                window.history.replaceState({}, document.title, newUrl);
+                                alert("Successfuly send your feedback");
+                            }
+                        }
+                        window.onload = displaySuccessMessage;
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!--DONT EDIT BEYOND THIS PART-->
+
+        <!--NAVIGATION BAR: FOOTER-->
+        <div class="foot">
+            <div class="quick-links">
+                <ul>
+                    <li><a href="01_index.html">HOME</a></li>
+                    <li><a href="02a_about_us.html">ABOUT US</a></li>
+                    <li><a href="10_resource.html">RESOURCES</a></li>
+                </ul>
+            </div>        
+        </div>
+        <!--NAVIGATION BAR: FOOTER END-->
+        
+    </body>
+</html>

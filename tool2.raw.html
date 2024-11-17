@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="resource/style/tools/raw_base.css">
+<link rel="stylesheet" href="resource/style/shared/center_table.css">
+
+<link rel="stylesheet" href="resource/style/shared/search_bar.css">
+<link rel="stylesheet" href="resource/style/shared/intercenter.css">
+<div class="center">
+    <div class="search_bar">
+        <input type="text" class="sb_item text" id="nameInput" placeholder="Character Name, Ascension Material or Talent Material">
+        <button class="sb_item button" onclick="searchChar()">Search</button>
+    </div>
+    <div class="intercenter display_table">
+        <table id="detail_table">
+            <tr>
+                <th>Character Icon</th>
+                <th>Character Name</th>
+                <th>Ascension Material</th>
+                <th>Talent Material</th>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/geo/Albedo_Icon.webp"></td>
+                <td>Albedo</td>
+                <td>Prithiva Topaz<br>Cecilia</td>
+                <td>Ballad</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/pyro/Amber_Icon.webp"></td>
+                <td>Amber</td>
+                <td>Agnidus Agate<br>Small Lamp Grass</td>
+                <td>Freedom</td>
+            </tr>            
+            <tr>
+                <td><img src="resource/photo/characters/hydro/Barbara_Icon.webp"></td>
+                <td>Barbara</td>
+                <td>Varunada Lazurite<br>Philanemo Mushroom</td>
+                <td>Freedom</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/pyro/Bennett_Icon.webp"></td>
+                <td>Bennett</td>
+                <td>Agnidus Agate<br>Wind Wheel Aster</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/pyro/Diluc_Icon.webp"></td>
+                <td>Diluc</td>
+                <td>Agnidus Agate<br>Small Lamp Grass</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/cryo/Diona_Icon.webp"></td>
+                <td>Diona</td>
+                <td>Shivada Jade<br>Calla Lily</td>
+                <td>Freedom</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/cryo/Eula_Icon.webp"></td>
+                <td>Eula</td>
+                <td>Shivada Jade<br>Dandelion Seed</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/electro/Fischl_Icon.webp"></td>
+                <td>Fischl</td>
+                <td>Vajrada Amethyst<br>Small Lamp Grass</td>
+                <td>Ballad</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/anemo/Jean_Icon.webp"></td>
+                <td>Jean</td>
+                <td>Vayuda Turquoise<br>Dandelion Seed</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/cryo/Kaeya_Icon.webp"></td>
+                <td>Kaeya</td>
+                <td>Shivada Jade<br>Calla Lily</td>
+                <td>Ballad</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/pyro/Klee_Icon.webp"></td>
+                <td>Klee</td>
+                <td>Agnidus Agate<br>Philanemo Mushroom</td>
+                <td>Freedom</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/electro/Lisa_Icon.webp"></td>
+                <td>Lisa</td>
+                <td>Vajrada Amethyst<br>Valberry</td>
+                <td>Ballad</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/cryo/Mika_Icon.webp"></td>
+                <td>Mika</td>
+                <td>Shivada Jade<br>Wolfhook</td>
+                <td>Ballad</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/hydro/Mona_Icon.webp"></td>
+                <td>Mona</td>
+                <td>Varunada Lazurite<br>Philanemo Mushroom</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/geo/Noelle_Icon.webp"></td>
+                <td>Noelle</td>
+                <td>Prithiva Topaz<br>Valberry</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/electro/Razor_Icon.webp"></td>
+                <td>Razor</td>
+                <td>Vajrada Amethyst<br>Wolfhook</td>
+                <td>Resistance</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/cryo/Rosaria_Icon.webp"></td>
+                <td>Rosaria</td>
+                <td>Shivada Jade<br>Valberry</td>
+                <td>Ballad</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/anemo/Sucrose_Icon.webp"></td>
+                <td>Sucrose</td>
+                <td>Vayuda Turquoise<br>Wind Wheel Aster</td>
+                <td>Freedom</td>
+            </tr>
+            <tr>
+                <td><img src="resource/photo/characters/anemo/Venti_Icon.webp"></td>
+                <td>Venti</td>
+                <td>Vayuda Turquoise<br>Cecilia</td>
+                <td>Ballad</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.getElementById("nameInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent the default action (if any) 
+                searchChar(); // Call the searchChar function
+            }
+        });        
+
+        function searchChar() {
+            var input, filter, table, tr, td, i, txtValue, tdName, tdMaterial, tdTalent;
+            input = document.getElementById("nameInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("detail_table");
+            tr = table.getElementsByTagName("tr");
+        
+            for (i = 0; i < tr.length; i++) {
+                tdName = tr[i].getElementsByTagName("td")[1];
+                tdMaterial = tr[i].getElementsByTagName("td")[2];
+                tdTalent = tr[i].getElementsByTagName("td")[3];
+                if (tdName || tdMaterial || tdTalent) {
+                    txtValueName = tdName ? (tdName.textContent || tdName.innerText).toUpperCase() : "";
+                    txtValueMaterial = tdMaterial ? (tdMaterial.textContent || tdMaterial.innerText).toUpperCase() : "";
+                    txtValueTalent = tdTalent ? (tdTalent.textContent || tdTalent.innerText).toUpperCase() : "";
+                    if (txtValueName.indexOf(filter) > -1 || txtValueMaterial.indexOf(filter) > -1 || txtValueTalent.indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }              
+    </script>
+</div>

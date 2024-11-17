@@ -1,0 +1,482 @@
+<link rel="stylesheet" href="resource/style/tools/raw_base.css">
+<link rel="stylesheet" href="resource/style/shared/center_table.css">
+
+<link rel="stylesheet" href="resource/style/shared/intercenter.css">
+<link rel="stylesheet" href="resource/style/shared/center_selection.css">
+<link rel="stylesheet" href="resource/style/shared/center_input.css">
+<div class="center">
+    <div class="intercenter input_region">
+        <p>
+            Select Material Type:<br>
+            <select name="mat_type_select" id="mat_type_select">
+                <option value="default"> - SELECT - </option>
+                <option value="0">Weapon Asscencion</option>
+                <option value="1">Character Talent</option>
+                <option value="2">Normal Boss [Gems]</option>
+                <option value="3">Weekly Boss [Gems]</option>
+            </select><br>
+
+            Select Your World Asscencion Level:<br>
+            <select name="wa_select" id="wa_select" disabled>
+                <option value="default"> - SELECT - </option>
+                <option value="0" id="world0">0</option>
+                <option value="1" id="world1">1</option>
+                <option value="2" id="world2">2</option>
+                <option value="3" id="world3">3</option>
+                <option value="4" id="world4">4</option>
+                <option value="5" id="world5">5</option>
+                <option value="6" id="world6">6</option>
+                <option value="7" id="world7">7</option>
+                <option value="8" id="world8">8</option>
+            </select><br>
+
+            Select Your Domain Level:<br>
+            <select name="dl_select" id="dl_select" disabled>
+                <option value="default"> - SELECT - </option>
+                <option value="0" id="domain1">1</option>
+                <option value="1" id="domain2">2</option>
+                <option value="2" id="domain3">3</option>
+                <option value="3" id="domain4">4</option>
+            </select><br><br>
+
+            Enter Number of Material to be Collected:<br>
+            <input type="number" min="0" value="0" max="100" id="number_input" class="num_scroll"><br>
+
+            Sellect Rarity:<br>
+            <select name="rarity_select" id="rarity_select" disabled>
+                <option value="default"> - SELECT - </option>
+                <option value="0" id="rarity2">2 Star</option>
+                <option value="1" id="rarity3">3 Star</option>
+                <option value="2" id="rarity4">4 Star</option>
+                <option value="3" id="rarity5">5 Star</option>
+            </select><br>
+
+            <button id="process_button">Process</button>
+        </p>
+    </div>
+    <div class="intercenter output_region">
+        <table>
+            <tr>
+                <th rowspan="2">Rarity</th>
+                <th colspan="2">Turn</th>
+                <th colspan="2">Amount</th>
+            </tr>
+            <tr>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Min</th>
+                <th>Max</th>
+            </tr>
+            <tr>
+                <td id="out_rarity"></td>
+                <td id="out_min_mat"></td>
+                <td id="out_max_mat"></td>
+                <td id="out_min_turn"></td>
+                <td id="out_max_turn"></td>
+            </tr>
+        </table>
+        <p id="out_description"></p>
+    </div>
+    <script>
+        var selection1 = document.querySelector('#mat_type_select'); // Material Type
+        var selection2 = document.querySelector('#wa_select');       // World Ascension Level
+        var selection3 = document.querySelector('#dl_select');       // Domain Level
+        var selection4 = document.querySelector('#rarity_select');   // Rarity
+
+        // World Option
+        var w_option0 = document.getElementById('world0');
+        var w_option1 = document.getElementById('world1');
+        var w_option2 = document.getElementById('world2');
+        var w_option3 = document.getElementById('world3');
+        var w_option4 = document.getElementById('world4');
+        var w_option5 = document.getElementById('world5');
+        var w_option6 = document.getElementById('world6');
+        var w_option7 = document.getElementById('world7');
+        var w_option8 = document.getElementById('world8');
+
+        // Domain
+        var d_option1 = document.getElementById('domain1');
+        var d_option2 = document.getElementById('domain2');
+        var d_option3 = document.getElementById('domain3');
+        var d_option4 = document.getElementById('domain4');
+
+        // Rarity Option
+        var r_option2 = document.getElementById('rarity2');
+        var r_option3 = document.getElementById('rarity3');
+        var r_option4 = document.getElementById('rarity4');
+        var r_option5 = document.getElementById('rarity5');
+
+        var t_selected = null;
+        var w_selected = null;
+        var d_selected = null;
+        var r_selected = null;
+        var numInput = null;
+
+    </script>
+    <script>
+        const weapon_min = [
+            [4, 0, 0, 0],
+            [2, 2, 0, 0],
+            [2, 0, 0, 0],
+            [2, 0, 0, 0]
+        ];
+
+        const weapon_max = [
+            [6, 0, 0, 0],
+            [3, 2, 0, 0],
+            [3, 3, 3, 0],
+            [3, 4, 4, 4]
+        ];
+
+        const talent_min = [
+            [3, 0, 0, 0],
+            [2, 1, 0, 0],
+            [2, 2, 0, 0],
+            [2, 0, 0, 0]
+        ];
+
+        const talent_max = [
+            [4, 0, 0, 0],
+            [3, 1, 0, 0],
+            [3, 2, 0, 0],
+            [3, 3, 3, 0]
+        ];
+
+        const nbGems_min = [
+            [2, 0, 0, 0],
+            [2, 0, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0]
+        ];
+
+        const nbGems_max = [
+            [3, 0, 0, 0],
+            [3, 0, 0, 0],
+            [2, 4, 0, 0],
+            [2, 4, 0, 0],
+            [2, 4, 2, 0],
+            [3, 5, 3, 0],
+            [3, 5, 3, 3],
+            [3, 5, 3, 3],
+            [3, 5, 3, 3]
+        ];
+
+        const wbGems_min = [
+            [0, 0, 0, 0],
+            [3, 0, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0]
+        ];
+
+        const wbGems_max = [
+            [0, 0, 0, 0],
+            [4, 0, 0, 0],
+            [3, 5, 0, 0],
+            [4, 6, 0, 0],
+            [4, 5, 4, 0],
+            [5, 7, 5, 0],
+            [5, 7, 5, 5],
+            [6, 8, 6, 6],
+            [6, 8, 6, 6]
+        ];
+
+        const rarity = [
+            "2 Star",
+            "3 Star", 
+            "4 Star", 
+            "5 Star" 
+        ];
+    </script>
+    <script>
+        /*
+        * This part only for limit selection
+        * 
+        */
+        // Material Type Selection
+        selection1.onchange = function() {
+            selection4.disabled = false;
+
+            switch (selection1.value) {
+                // Weapon Ascension
+                case '0':
+                    selection2.disabled = true;
+                    selection3.disabled = false;
+                    selection2.value = "default";
+                    break;
+
+                // Character Talent
+                case '1':
+                    selection2.disabled = true;
+                    selection3.disabled = false;
+                    r_option5.disabled = true;
+                    selection4.value = "default";
+                    selection2.value = "default";
+                    break;
+
+                // Normal Boss [Gems]
+                case '2':
+                    w_option0.disabled = false;
+                    selection2.disabled = false;
+                    selection3.disabled = true;
+                    selection3.value = "default";
+                    break;
+
+                // Weekly Boss [Gems]
+                case '3':
+                    selection2.disabled = false;
+                    selection3.disabled = true;
+                    w_option0.disabled = true;
+                    selection2.value = "default";
+                    selection3.value = "default";
+                    break;
+
+                // Default case
+                default:
+                    selection2.disabled = true;
+                    selection3.disabled = true;
+                    selection4.disabled = true;
+                    selection2.value = "default";
+                    selection3.value = "default";
+                    selection4.value = "default";
+                    break;
+            }
+
+            t_selected = selection1.value;
+        };
+
+        // Ascension Gems
+        selection2.onchange = function () {
+            const value = selection2.value;
+            const disableOptions = (r2, r3, r4, r5) => {
+                r_option2.disabled = r2;
+                r_option3.disabled = r3;
+                r_option4.disabled = r4;
+                r_option5.disabled = r5;
+            };
+
+            if (selection1.value == 2) {  // Normal Boss [Gems]
+                if (value == 0 || value == 1) {
+                    disableOptions(false, true, true, true);
+                } else if (value == 2 || value == 3) {
+                    disableOptions(false, false, true, true);
+                } else if (value == 4 || value == 5) {
+                    disableOptions(false, false, false, true);
+                } else if (value >= 6 && value <= 8) {
+                    disableOptions(false, false, false, false);
+                } else {
+                    selection4.value = "default";
+                }
+            } else if (selection1.value == 3) {  // Weekly Boss [Gems]
+                if (value == 1) {
+                    disableOptions(false, true, true, true);
+                } else if (value == 2 || value == 3) {
+                    disableOptions(false, false, true, true);
+                } else if (value == 4 || value == 5) {
+                    disableOptions(false, false, false, true);
+                } else if (value >= 6 && value <= 8) {
+                    disableOptions(false, false, false, false);
+                } else {
+                    selection4.value = "default";
+                }
+            }
+
+            w_selected = selection2.value;
+        };
+        
+        // Domain Selection
+        selection3.onchange = function () {
+            const value = selection3.value;
+            const disableOptions = (r2, r3, r4, r5) => {
+                r_option2.disabled = r2;
+                r_option3.disabled = r3;
+                r_option4.disabled = r4;
+                r_option5.disabled = r5;
+            };
+
+            if (selection1.value == 0) {  // Weapon Ascension
+                switch (value) {
+                    case '0':
+                        disableOptions(false, true, true, true);
+                        break;
+                    case '1':
+                        disableOptions(false, false, true, true);
+                        break;
+                    case '2':
+                        disableOptions(false, false, false, true);
+                        break;
+                    case '3':
+                        disableOptions(false, false, false, false);
+                        break;
+                    default:
+                        selection4.value = "default";
+                }
+            } else if (selection1.value == 1) {  // Character Talent
+                switch (value) {
+                    case '0':
+                        disableOptions(false, true, true, true);
+                        break;
+                    case '1':
+                        disableOptions(false, false, true, true);
+                        break;
+                    case '2':
+                        disableOptions(false, false, true, true);
+                        break;
+                    case '3':
+                        disableOptions(false, false, false, true);
+                        break;
+                    default:
+                        selection4.value = "default";
+                }
+            }
+
+            d_selected = selection3.value;
+        };
+    
+        selection4.onchange = function () {
+            r_selected = selection4.value;
+        }
+
+    </script>
+    <script>
+
+        function getValueFromConstants(worldOption, domainOption, rarityOption) {
+
+            // Mapping indices to constants
+            const worldIndex  = (!isNaN(worldOption))  ? worldOption: 0; // Index mapping for world option
+            const domainIndex = (!isNaN(domainOption)) ? domainOption: 0; // Index mapping for domain option
+            const rarityIndex = (!isNaN(rarityOption)) ? rarityOption: 0; // Index mapping for rarity option
+
+            // Retrieve values from constant arrays
+            let nbGemsMinValue = nbGems_min[worldIndex][rarityIndex];
+            let nbGemsMaxValue = nbGems_max[worldIndex][rarityIndex];
+            let wbGemsMinValue = wbGems_min[worldIndex][rarityIndex];
+            let wbGemsMaxValue = wbGems_max[worldIndex][rarityIndex];
+            let weaponMinValue = weapon_min[domainIndex][rarityIndex];
+            let weaponMaxValue = weapon_max[domainIndex][rarityIndex];
+            let talentMinValue = talent_min[domainIndex][rarityIndex];
+            let talentMaxValue = talent_max[domainIndex][rarityIndex];
+        
+            // Return an object with the retrieved values
+            return {
+                nbGemsMinValue,
+                nbGemsMaxValue,
+                wbGemsMinValue,
+                wbGemsMaxValue,
+                weaponMinValue,
+                weaponMaxValue,
+                talentMinValue,
+                talentMaxValue
+            };
+        }
+        
+        var output_rarity   = document.getElementById("out_rarity");
+        var output_mat_min  = document.getElementById("out_min_mat");
+        var output_mat_max  = document.getElementById("out_max_mat");
+        var output_turn_min = document.getElementById("out_min_turn");
+        var output_turn_max = document.getElementById("out_max_turn");
+        var output_desc     = document.getElementById("out_description");
+
+        var procButton  = document.getElementById("process_button");
+        var numberInput = document.getElementById("number_input");
+
+        function countTurn(require, baseValue) {
+            if (baseValue == '0' || baseValue == 0) {
+                return 0;
+            }
+
+            let turn = 0;
+            let sum  = 0;
+            
+            while (sum < require) {
+                turn++;
+                sum += baseValue;
+            
+            }
+            return turn;
+        }
+
+        procButton.addEventListener("click", function() {
+            
+            output_mat_max.innerHTML = "";
+            output_mat_min.innerHTML = "";
+            
+            const isDefaultSelectedTypeOption   = (selection1.value) == 'default'; 
+            const isDefaultSelectedWorldOption  = (selection2.value) == 'default';
+            const isDefaultSelectedDomainOption = (selection3.value) == 'default';
+            const isDefaultSelectedRarityOption = (selection4.value) == 'default';
+            const isDefaultInputValue           = numberInput.value  == '0';
+            
+            // Get the selected options
+            const selectedTypeOption   = parseInt(selection1.value); 
+            const selectedWorldOption  = parseInt(selection2.value);
+            const selectedDomainOption = parseInt(selection3.value);
+            const selectedRarityOption = parseInt(selection4.value);
+            const inputValue           = parseInt(numberInput.value);
+            
+            const values = getValueFromConstants(selectedWorldOption, selectedDomainOption, selectedRarityOption);
+            
+            console.log('isDefaultSelectedTypeOption: ' + isDefaultSelectedTypeOption);
+            console.log('isDefaultSelectedWorldOption: ' + isDefaultSelectedWorldOption);
+            console.log('isDefaultSelectedDomainOption: ' + isDefaultSelectedDomainOption);
+            console.log('isDefaultSelectedRarityOption: ' + isDefaultSelectedRarityOption);
+            console.log('isDefaultInputValue: ' + isDefaultInputValue);
+
+            console.log('selectedTypeOption: ' + selectedTypeOption);
+            console.log('selectedWorldOption: ' + selectedWorldOption);
+            console.log('selectedDomainOption: ' + selectedDomainOption);
+            console.log('selectedRarityOption: ' + selectedRarityOption);
+            console.log('inputValue: ' + inputValue);
+
+            const validForm = (
+                !isDefaultSelectedTypeOption &&
+                !isDefaultSelectedRarityOption &&
+                (!isDefaultSelectedWorldOption ||
+                 !isDefaultSelectedDomainOption) &&
+                !isDefaultInputValue
+            );
+
+            console.log('validForm: ' + validForm);
+
+            if (validForm) {
+                // Get the values from the constants
+                
+                switch (selectedTypeOption) {
+                    case 0:
+                    output_mat_max.innerHTML = values.weaponMaxValue;
+                    output_mat_min.innerHTML = values.weaponMinValue;
+                    break;
+    
+                    case 1:
+                    output_mat_max.innerHTML = values.talentMaxValue;
+                    output_mat_min.innerHTML = values.talentMinValue;
+                    break;
+    
+                    case 2:
+                    output_mat_max.innerHTML = values.nbGemsMaxValue;
+                    output_mat_min.innerHTML = values.nbGemsMinValue;
+                    break;
+    
+                    case 3:
+                    output_mat_max.innerHTML = values.wbGemsMaxValue;
+                    output_mat_min.innerHTML = values.wbGemsMinValue;
+                    break;
+                }
+
+                output_rarity.innerHTML = rarity[selection4.value];
+    
+                output_turn_max.innerHTML = (countTurn(inputValue, parseInt(output_mat_max.innerHTML)) !== 0) ? countTurn(inputValue, parseInt(output_mat_max.innerHTML)) : "Try at least 1 more";
+                output_turn_min.innerHTML = (countTurn(inputValue, parseInt(output_mat_min.innerHTML)) !== 0) ? countTurn(inputValue, parseInt(output_mat_min.innerHTML)) : "Try at least 1 more";
+            }
+        });
+    </script>
+</div>

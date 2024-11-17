@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="resource/photo/main/logo.png">
+        <title>Genshin Impact Guide Website</title>
+
+        <link rel="stylesheet" href="resource/style/shared/base_style.css">
+        <link rel="stylesheet" href="resource/style/main/index.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar.css">
+        <link rel="stylesheet" href="resource/style/shared/navbar_footer.css">
+        <link rel="stylesheet" href="resource/style/shared/center_table.css">
+        <link rel="stylesheet" href="resource/style/shared/center_iframe_switch.css">
+    </head>
+    <body>
+
+        <!--NAVIGATION BAR-->
+        <div class="head">
+            <div class="navbar">
+                <img src="resource/photo/main/logo.png" alt="Genshin Impact Guide Logo" class="logo">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button onclick="window.location.href='01_index.html'" class="pagebtn">Home</button>
+                    </div>
+                    <div class="dropdown about">
+                        <button class="dropbtn">About 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="02b_about_game.html">Game</a>
+                            <a href="02a_about_us.html">Our Team</a>
+                        </div>
+                    </div>
+                    <div class="dropdown tool">
+                        <button class="dropbtn">Tool 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="03a_tool1.html">Time Manager</a>
+                            <a href="03b_tool2.html">Character Details</a>
+                            <a href="03c_tool3.html">Material Calculator</a>
+                            <a href="03d_tool4.html">Ascension Material List</a>
+                        </div>
+                    </div>
+                    <div class="dropdown resource">
+                        <button onclick="window.location.href='10_resource.html'" class="pagebtn">Resources</button>
+                    </div>
+                    <div class="dropdown feedback">
+                        <button onclick="window.location.href='1000_feedback_form.html'" class="pagebtn">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--NAVIGATION BAR END-->
+
+        <!--Main Page-->
+        <!--EDIT THIS PART ONLY-->
+        <div class="container">
+
+            <!--NAVIGATION PART: LEFT-->
+            <div class="navbar_left">
+                <nav>
+                    <ul>
+                        <li><a href="#game_info">Game Information</a></li>
+                        <li><a href="#preview">Tools Preview</a></li>
+                        <li><a href="#resource">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--NAVIGATION PART: LEFT END-->
+
+            <!--NAVIGATION PART: CENTER-->
+            <div class="center">
+                <h1>Welcome To Genshin Impact Guide Website</h1>
+                <div id="game_info">
+                    <h2>Game Information</h2>
+                    <p>
+                        Genshin is a game produced by the company Hoyoverse,
+                        previously known as MiHoyo. A Chinese game company
+                        located in Shanghai, China.
+
+                        <br/><br/>
+
+                        Genshin Impact was released on 28 September 2020 in
+                        Android, iOS, PS4 and Windows, 28 April 2020 for
+                        PS5 and 20 November 2024 for Xbox Series X/S.
+
+                        <br/><br/>
+
+                        Genshin Impact starts its development in 2017 while taking
+                        inspiration from <i>The Legend of Zelda: Breath of the Wild</i>,
+                        several anime scenes, Gnosticism and some other games
+                        while representing a wide array of cultures around the
+                        world including world mythology.
+
+                        <br/><br/>
+
+                        Genshin Impact promote players with open-world adventure,
+                        unique elemental-based combat mechanism, animation styles,
+                        real life cultural-base referenced character design and a
+                        wide range of musical composition from classical, jazz, rock,
+                        traditional, poetry and Electronic Dance Music (EDM).
+                    </p>
+                </div>
+                <div id="preview">
+                    <h2>Tools Preview</h2>
+                    <p>
+                        This web provides players a helpful tools like Time Manager,
+                        Character Details, Material Calculator and Acension Material
+                        List.
+
+                        <br/>
+                        <iframe src="tool1.raw.html" id="tool_preview"></iframe>
+                        <table class="iframe-switch">
+                            <tr>
+                                <td><button onclick="changeT1()">Time Management</button></td>
+                                <td><button onclick="changeT2()">Character Details</button></td>
+                                <td><button onclick="changeT3()">Material Calculator</button></td>
+                            </tr>
+                        </table>
+
+                        <script>
+                            function changeT1() {
+                                document.getElementById("tool_preview").setAttribute("src", "tool1.raw.html");
+                            }
+
+                            function changeT2() {
+                                document.getElementById("tool_preview").setAttribute("src", "tool2.raw.html");
+                            }
+
+                            function changeT3() {
+                                document.getElementById("tool_preview").setAttribute("src", "tool3.raw.html");
+                            }
+                        </script>
+                    </p>
+                </div>
+                <div id="resource">
+                    <h2>Resources</h2>
+                    <p>
+                        All information obtained during research is collected from
+                        several publicly open websites and multiple YouTube videos.
+                        In maintaining the reliability of this website, lots of
+                        cross-referencing has been conducted in order to achieve
+                        the most reliable information in understanding the game
+                        mechanism and how to progress with much quicker
+                    </p>
+                </div>
+            </div>
+            <!--NAVIGATION PART: CENTER END-->
+
+            <!--NAVIGATION PART: RIGHT-->
+            <div class="right">
+                <h3>Demo Gameplay Video</h3>
+                <video height="240" controls>
+                    <source src="resource/video/demo_gameplay.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+                <i>Demo gameplay recorded on Infinix GT20 Pro</i>
+            </div>
+            <!--NAVIGATION PART: RIGHT END-->    
+        </div>
+        <!--DONT EDIT BEYOND THIS PART-->
+
+        <!--NAVIGATION BAR: FOOTER-->
+        <div class="foot">
+            <div class="quick-links">
+                <ul>
+                    <li><a href="01_index.html">HOME</a></li>
+                    <li><a href="02a_about_us.html">ABOUT US</a></li>
+                    <li><a href="10_resource.html">RESOURCES</a></li>
+                </ul>
+            </div>        
+        </div>
+        <!--NAVIGATION BAR: FOOTER END-->
+
+    </body>
+</html>
