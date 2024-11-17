@@ -1,2 +1,2 @@
-# genshin_helper_webpage
+# Genshin Helper Web page
 A web page about Genshin Helper Webpage
